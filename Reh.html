@@ -1,0 +1,81 @@
+﻿<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculadora</title>
+
+<style>
+table {
+	background-color:#FDCB00;
+	border:medium #0A2934 solid;
+	border-radius: 10px;
+
+	
+}
+
+table tr td input{
+	border-radius: 5px;
+}
+
+
+</style>
+
+<script language="javascript" type="text/javascript">
+
+// Posiciona o numero digitado na tela
+function putNum(num) {
+   document.getElementById('tela').value = document.getElementById('tela').value + num;
+}
+
+// Limpa a tela
+function limpar() {
+   document.getElementById('tela').value= " ";
+}
+
+// Posiciona o operador na tela, caso um numero tenha sido digitado
+function operator(oprt){
+	if( document.getElementById('tela').value != " ")
+	{ document.getElementById('tela').value = document.getElementById('tela').value + oprt;   }
+	else
+	{ alert("Por favor, digite um numero antes do operador!");}     
+}
+
+// Realiza a conta
+function calculo() {
+	document.getElementById('tela').value = eval(document.getElementById('tela').value);
+}
+
+</script>
+</head>
+<body>
+    <td colspan="4">
+<input type="text" name="tela" value="0" id="tela" align="right" maxlength="18" disabled="disabled">
+</td>
+<br>
+    <input type="button" name="CE" type="button" value="CE" onclick="limpar()">
+    <input type="button" name="C" type="button" value="C" onclick="limpar()">
+    <input type="button" name="⇐" type="button" value="⇐" onclick="limpar()">
+    <input type="button" name="/" value="  /  " onclick="operator('/')">
+    <br>
+    <input type="button" name="7" value="  7  " onclick="putNum(7)">
+    <input type="button" name="8" value="  8  " onclick="putNum(8)">
+    <input type="button" name="9" value="  9  " onclick="putNum(9)">
+    <input type="button" name="x" value=" x  " onclick="operator('x')">
+    <br>
+    <input type="button" name="4" value="  4  " onclick="putNum(4)">
+    <input type="button" name="5" value="  5  " onclick="putNum(5)">
+    <input type="button" name="6" value="  6  " onclick="putNum(6)">
+    <input type="button" name="-" value="  -  " onclick="operator('-')">
+    <br>
+    <input type="button" name="2" value="  3  " onclick="putNum(3)">
+    <input type="button" name="2" value="  2  " onclick="putNum(2)">
+    <input type="button" name="1" value="  1  " onclick="putNum(1)">
+    <input type="button" name="+" value=" +  " onclick="operator('+')">
+    <br>
+    <input type="button" name="±" value="  ±  " onclick="operator(±)">
+    <input type="button" name="0" value="  0  " onclick="putNum(0)">
+    <input type="button" name="," value=" ,  " onclick="operator(',')">
+    <input type="button" name="=" value="  =  " onclick="calculo()">
+
+</body>
+</html>
