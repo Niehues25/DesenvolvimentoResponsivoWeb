@@ -1,0 +1,25 @@
+<script type="text/javascript">
+var i;
+for( i=1; i<=100; i++ ) {
+var num3 = 3;
+var num5 = 5;
+
+fizz = i%num3
+buzz = i%num5;
+
+if(fizz == 0) {
+	document.write("Fizz");
+}
+
+if(buzz == 0) {
+	document.write("Buzz");
+}
+
+if( fizz != 0 && buzz != 0 ) {
+	document.write(i);
+} 
+
+document.write("<br />");
+
+}
+</script>

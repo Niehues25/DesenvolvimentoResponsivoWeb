@@ -1,0 +1,10 @@
+for (var i = 1; i <= 20; i++){ //primeiro um laço for para contar de 1 a 20
+if((i % 3 === 0) && (i % 5 === 0)){ //condição verifica se divisível por 3 e 5
+    console.log("FizzBuzz"); //exibi FizzBuzz se condição for true
+}else if(i % 5 === 0){//condição verifica divisível somente por 5
+    console.log("Buzz");//exibe Buzz se true
+}else if(i % 3 === 0){//condição verifica divisivel somente por 3
+    console.log("Fizz");//exibe Fizz se true
+}else{//caso nenhuma das condições são true
+    console.log(i);//exibe somente o numero
+}}
