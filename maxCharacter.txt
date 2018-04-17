@@ -1,0 +1,21 @@
+fuction maxCharacter(str) {
+     var guardaValor = {};
+     for (var i = 0; i < str.length; i++) {
+        if (!guardaValor[str[i]]) {
+            guardaValor[str[i]] = 1;
+        else
+            guardaValor[str[i]]++;
+    }
+      var charRecorrente = "", 
+        numeroVezes = 0;
+
+      for (var key in guardaValor) {
+            console.log("guardaValor[\"" +key + "\"]: + guardaValor [key]);
+            if (guardaValor[key] > numeroVezes) {
+                charRecorrente = key;
+                numeroVezes = guardaValor[key];
+            } 
+      }
+}
+console.log(charRecorrente + ": " + numeroVezes);
+maxCharacter("teste")
